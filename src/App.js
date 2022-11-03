@@ -1,14 +1,9 @@
-import logo from './logo.svg';
+import logo from "./logo.svg";
 import "./App.scss";
 import Main from "./containers/Main";
 
 function App() {
-  return (
-
-      
-      <Main />
-
-  );
+  return <Main />;
 }
 
 export default App;

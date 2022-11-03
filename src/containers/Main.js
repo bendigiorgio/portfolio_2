@@ -3,6 +3,8 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import SplashScreen from "./splashScreen/SplashScreen";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Travel from "./travel/Travel" 
+import "./Main.scss"
+import Greeting from "./greeting/Greeting";
 
 
 const Main = () => {
@@ -23,7 +25,7 @@ const Main = () => {
 
 
   return (
-    <div>
+    <div id="background">
         {isShowingSplashAnimation  ? (
           <SplashScreen />
         ) : (
@@ -33,6 +35,7 @@ const Main = () => {
               path="/"
               element={(
                 <>
+                  <Greeting />
                   <Travel />
                 </>
               )}

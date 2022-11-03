@@ -1,0 +1,22 @@
+@import "../../globalColor";
+
+.welcome-container {
+    position: relative;
+    text-align: center;
+    #heading-wrapper{
+        display: inline-block;
+        text-align: left;
+    }
+    #header-text {
+        
+        font-size:10vw;
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        color: $textColor;
+        font-weight: 600;
+    }
+    #sub-text {
+        color: $textColor;
+    }
+}
+

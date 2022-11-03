@@ -1,55 +1,56 @@
 //import TravelGlobe from "../../components/travelGlobe/TravelGlobe";
-import {useEffect} from 'react';
-import * as THREE from 'three';
+import { useEffect } from "react";
+import * as THREE from "three";
 import "./Travel.scss";
 
+
 export default function Travel() {
-    
-    useEffect(() => {
-        const scene = new THREE.Scene();
+  useEffect(() => {
+    const scene = new THREE.Scene();
 
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById("globeCanvas"), alpha: true ,
+    });
+    const segmentCanvas = renderer.domElement;
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      segmentCanvas.clientWidth / segmentCanvas.clientHeight,
+      0.1,
+      1000
+    );
 
-        const renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById('globeCanvas'),
-        });
-        
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.position.setZ(40);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(segmentCanvas.clientWidth, segmentCanvas.clientHeight);
 
-        const globeTexture = new THREE.TextureLoader().load(
-            // resource URL
-            'earthFlat.jpg')
+    camera.position.setZ(60);
 
-        //Geometry
+    const globeTexture = new THREE.TextureLoader().load(
+      // resource URL
+      "earthFlat.jpg"
+    );
+    //Geometry
 
-        const geometry = new THREE.SphereGeometry( 15, 60, 25 );
-        const material = new THREE.MeshBasicMaterial({
-            map: globeTexture
-        });
-        const globe = new THREE.Mesh(geometry, material);
+    const geometry = new THREE.SphereGeometry(15, 60, 25);
+    const material = new THREE.MeshBasicMaterial({
+      map: globeTexture,
+    });
+    const globe = new THREE.Mesh(geometry, material);
 
-        //scene.background = globeTexture;
+    //scene.background = globeTexture;
 
-        scene.add(globe);
+    scene.add(globe);
 
-        function animate() {
-        requestAnimationFrame(animate);
+    function animate() {
+      requestAnimationFrame(animate);
 
-        renderer.render(scene, camera);
-        }
+      renderer.render(scene, camera);
+    }
 
-        animate();
-        
-    }, [] );
-return(
+    animate();
+  }, []);
+  return (
     <div>
-        <p>Hi</p>
-        <canvas id = 'globeCanvas'/>
-        
+      <canvas id="globeCanvas" />
     </div>
-)
-
+  );
 }
-
