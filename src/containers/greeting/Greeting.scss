@@ -1,22 +1,43 @@
 @import "../../globalColor";
 
+.panel{
+    height: 100vw;
+    width: 100vw;
+}
 .welcome-container {
+    display: inline-block;
     position: relative;
     text-align: center;
-    #heading-wrapper{
-        display: inline-block;
-        text-align: left;
-    }
-    #header-text {
+    
+
+    #heading-text{
         
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #header-title {
         font-size:10vw;
         text-transform: uppercase;
         font-family: 'Montserrat';
         color: $textColor;
-        font-weight: 600;
+        font-weight: 900;
     }
     #sub-text {
-        color: $textColor;
+        color: $subTitle;
+        font-family: 'FiraSans';
+        font-size: 3vw;
+        font-weight: 300;
     }
+    #bg-image{
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: auto;
+        width: 100%;
+    }
+
 }
 

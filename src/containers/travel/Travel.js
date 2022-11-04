@@ -49,7 +49,7 @@ export default function Travel() {
     animate();
   }, []);
   return (
-    <div>
+    <div data-scroll-section>
       <canvas id="globeCanvas" />
     </div>
   );
