@@ -1,8 +1,8 @@
-@import './_globalColor.scss';
+@import "./_globalColor.scss";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,14 +10,16 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'), url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'FiraSans';
-  src: local('FiraSans'), url(./assets/fonts/Fira_Sans/FiraSans-Regular.ttf) format('truetype');
-}
+// @font-face {
+//   font-family: 'Montserrat';
+//   src: local('Montserrat'), url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+// }
+// @font-face {
+//   font-family: 'FiraSans';
+//   src: local('FiraSans'), url(./assets/fonts/Fira_Sans/FiraSans-Regular.ttf) format('truetype');
+// }
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,900;1,900&display=swap");
+

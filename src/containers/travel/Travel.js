@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import * as THREE from "three";
 import "./Travel.scss";
-
+import { gsap } from "gsap";
 
 export default function Travel() {
   useEffect(() => {
@@ -47,10 +47,26 @@ export default function Travel() {
     }
 
     animate();
+
+    // var action = gsap.timeline({
+    //   defaults:{ ease:'none'},
+    //   scrollTrigger: {
+    //     trigger: ".globeWrapper",
+    //     pin:true,
+    //     scroller: "#main-container",
+    //     scrub:0.3,
+    //     start: "top top",
+    //     end: "+=100%"
+    //   }
+    // })
+    // // .to('.rwv-3, .rwv-2, .rwv-1, .blwv', {scaleY:0, duration:2, stagger:0.4})
   }, []);
   return (
-    <div data-scroll-section>
+    <section data-scroll-section>
+      <h2 className="title">Where I'm From</h2>
+    <div className='globeWrapper' >
       <canvas id="globeCanvas" />
     </div>
+    </section>
   );
 }

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Travel from "./travel/Travel";
 import "./Main.scss";
 import Greeting from "./greeting/Greeting";
-import { gsap } from "gsap";
+import JapaneseSkill from "../components/japaneseSkill/JapaneseSkill";
 import useLocoScroll from "../hooks/useLocoScroll";
 
 const Main = () => {
@@ -22,7 +22,7 @@ const Main = () => {
     };
   }, []);
   return (
-    <div id="main-container">
+    <div id="main-container" data-scroll-section>
       {isShowingSplashAnimation ? (
         <SplashScreen />
       ) : (
@@ -33,6 +33,7 @@ const Main = () => {
               element={
                 <>
                   <Greeting />
+                  <JapaneseSkill />
                   <Travel />
                 </>
               }

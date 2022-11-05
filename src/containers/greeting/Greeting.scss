@@ -21,13 +21,13 @@
     #header-title {
         font-size:10vw;
         text-transform: uppercase;
-        font-family: 'Montserrat';
-        color: $textColor;
+        font-family: 'Montserrat', sans-serif;
+        color: $textColor2;
         font-weight: 900;
     }
     #sub-text {
         color: $subTitle;
-        font-family: 'FiraSans';
+        font-family: 'Fira Sans', sans-serif;
         font-size: 3vw;
         font-weight: 300;
     }
