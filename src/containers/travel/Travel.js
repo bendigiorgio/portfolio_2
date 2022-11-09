@@ -62,11 +62,11 @@ export default function Travel() {
     // // .to('.rwv-3, .rwv-2, .rwv-1, .blwv', {scaleY:0, duration:2, stagger:0.4})
   }, []);
   return (
-    <section data-scroll-section>
+    <div className='travel-wrapper' data-scroll-section>
       <h2 className="title">Where I'm From</h2>
     <div className='globeWrapper' >
       <canvas id="globeCanvas" />
     </div>
-    </section>
+    </div>
   );
 }

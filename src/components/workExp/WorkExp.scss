@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: flex-start;
   margin-right: -1px;
+  height: 100vw;
 }
 .heading {
   display: flex;
@@ -113,6 +114,7 @@
   }
   
   .swiper-slide {
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.6);
     width: auto !important; 
     text-align: center;
     font-size: 18px;

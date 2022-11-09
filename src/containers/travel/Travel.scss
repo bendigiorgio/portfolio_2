@@ -1,5 +1,17 @@
 @import "../../globalColor";
 
+.travel-wrapper {
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    max-width: 1448px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: -1px;
+    height: 100vw;
+    background:$background;
+}
+
 canvas {
     position: relative;
     top: 0;
@@ -9,10 +21,9 @@ canvas {
     
 }
 
-.globeWrapper {
-    height: 100vw;
-    background:$background;
-}
+// .globeWrapper {
+    
+// }
 
 .title {
     margin-top: -20px;
