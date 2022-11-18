@@ -18,11 +18,12 @@ export default function Travel() {
       0.1,
       1000
     );
+  
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(segmentCanvas.clientWidth, segmentCanvas.clientHeight);
 
-    camera.position.setZ(60);
+    camera.position.setZ(30);
 
     const globeTexture = new THREE.TextureLoader().load(
       // resource URL
@@ -64,8 +65,10 @@ export default function Travel() {
   }, []);
   return (
     <div className='travel-wrapper' data-scroll-section>
+      <div className="text-wrapper">
       <h2 className="title">Where I'm From</h2>
-    <div className='globeWrapper' >
+      </div>
+    <div className='globe-wrapper' >
       <canvas id="globeCanvas" />
     </div>
     </div>

@@ -26,7 +26,7 @@ export default function JapaneseSkill() {
   }, [isMouseIn]);
 
   return (
-    <div className="wrapper langsec" 
+    <div className="language-wrapper langsec" 
     onMouseEnter={() => setIsMouseIn(true)}
     onMouseLeave={() => setIsMouseIn(false)} 
     data-scroll-section>

@@ -2,35 +2,40 @@
 
 .travel-wrapper {
     position: relative !important;
-    display: flex;
-    flex-direction: column;
-    max-width: 1448px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: -1px;
-    height: 100vw;
+    // display: flex;
+    // flex-direction: column;
+    width: 100vw;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    height: 100vh;
     background:$background;
 }
-
+.text-wrapper {
+    width: 100%;
+    position: relative;
+}
 canvas {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
     
 }
 
-// .globeWrapper {
-    
-// }
+.globe-wrapper {
+    position: absolute;
+    top: 7vw;
+    height: 100%;
+    width: 100%;
+}
 
 .title {
-    margin-top: -20px;
-    text-align: center;
-    font-size:10vw;
+    text-align: left;
+    font-size:7vw;
     text-transform: uppercase;
     font-family: 'Montserrat';
     color: $textColor;
     font-weight: 900;
+    padding-right: 47px;
+    padding-left: 47px;
 }
