@@ -32,6 +32,7 @@ export default function Greeting(){
                         <h1 id="header-title">Ben Di Giorgio</h1>
                         <p id="sub-text">Take a look into my life</p>
                 </div>
+                <div className="cover-up"></div>
             </div>
 
                 

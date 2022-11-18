@@ -35,6 +35,7 @@ export default function Travel() {
       map: globeTexture,
     });
     const globe = new THREE.Mesh(geometry, material);
+    globe.position.setX(15);
 
     //scene.background = globeTexture;
 

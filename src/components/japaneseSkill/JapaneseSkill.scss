@@ -4,6 +4,11 @@
 	display: block;
 	position: relative;
 	text-align: center;
+	max-height: 50vw;
+}
+
+.langsec {
+	cursor: none;
 }
 
 .hero {
@@ -15,7 +20,7 @@
 }
 
 .jp {
-	--mask: radial-gradient(circle at var(--x, 70%) var(--y, 50%), black 25%, transparent 0);
+	--mask: radial-gradient(circle at var(--x, 50%) var(--y, 30%), black 25%, transparent 0);
 	position: absolute;
 	top: 0;
 	left: 0;

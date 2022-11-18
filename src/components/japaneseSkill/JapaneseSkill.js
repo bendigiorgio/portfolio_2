@@ -1,25 +1,35 @@
-import { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import "./JapaneseSkill.scss";
 
 export default function JapaneseSkill() {
-  useEffect(() => {
-    const hero = document.querySelector("[data-hero]");
+  const [isMouseIn, setIsMouseIn] = useState(false);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const hero = document.querySelector("[data-hero]");
 
-    window.addEventListener("mousemove", (e) => {
-      const x = Math.round((e.clientX / window.innerWidth) * 100);
-      const y = Math.round((e.clientY / window.innerHeight) * 100);
+  const  handleMove = useCallback((event) => {
+    const x = Math.round((event.clientX / window.innerWidth) * 100);
+    const y = Math.round((event.clientY / window.innerHeight) * 100);
 
-      gsap.to(hero, {
-        "--x": `${x}%`,
-        "--y": `${y}%`,
-        duration: 0.3,
-        ease: "sine.out",
-      });
+    gsap.to(hero, {
+      "--x": `${x}%`,
+      "--y": `${y}%`,
+      duration: 0.3,
+      ease: "sine.out",
     });
-  }, []);
+  },[isFirstLoad]);
+
+  useEffect(() => {
+    setIsFirstLoad(false);
+    {isMouseIn ? (window.addEventListener("mousemove", handleMove)
+    ) : (window.removeEventListener("mousemove", handleMove))}
+  }, [isMouseIn]);
+
   return (
-    <div className="wrapper" data-scroll-section>
+    <div className="wrapper langsec" 
+    onMouseEnter={() => setIsMouseIn(true)}
+    onMouseLeave={() => setIsMouseIn(false)} 
+    data-scroll-section>
       <div className="hero">
         <h1 className="text eng">I love learning new languages and how it opens up the world.<br/>I have been learning Japanese since 7th grade and can’t imagine my life without it.</h1>
       </div>
