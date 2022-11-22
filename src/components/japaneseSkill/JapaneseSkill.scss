@@ -20,7 +20,8 @@
 }
 
 .jp {
-	--mask: radial-gradient(circle at var(--x, 50%) var(--y, 30%), black 25%, transparent 0);
+	transition: all 1s ease;
+	--mask: radial-gradient(circle var(--s, 0rem) at var(--x, 50%) var(--y, 50%), black 25%, transparent 0);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -29,6 +30,7 @@
 	-webkit-mask-image: var(--mask);
 	mask-image: var(--mask);
 }
+
 .text {
 	margin-left: 40px;
 	margin-right: 40px;

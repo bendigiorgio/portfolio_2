@@ -6,7 +6,9 @@ export default function JapaneseSkill() {
   const [isMouseIn, setIsMouseIn] = useState(false);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const hero = document.querySelector("[data-hero]");
-
+  const fadeIn = () => gsap.to(hero, {'--s': '50rem', duration: 1, ease: 'back.out(2)'});
+  const fadeOut = () => gsap.to(hero, {'--s': '0rem', duration: 0.5, ease: 'power1'});
+  
   const  handleMove = useCallback((event) => {
     const x = Math.round((event.clientX / window.innerWidth) * 100);
     const y = Math.round((event.clientY / window.innerHeight) * 100);
@@ -21,6 +23,7 @@ export default function JapaneseSkill() {
 
   useEffect(() => {
     setIsFirstLoad(false);
+    {isMouseIn ? (fadeIn()) : (fadeOut())}
     {isMouseIn ? (window.addEventListener("mousemove", handleMove)
     ) : (window.removeEventListener("mousemove", handleMove))}
   }, [isMouseIn]);
