@@ -11,13 +11,20 @@ export default function useLocoScroll(start) {
     if (!start) return;
     let locoScroll = null;
 
-    const scrollEl = document.querySelector("#main-container");
+    const scrollEl = document.querySelector("[data-scroll-container]");
 
     locoScroll = new LocomotiveScroll({
       el: scrollEl,
       smooth: true,
       multiplier: 1,
-      class: "is-reveal",
+      mobile: {
+        breakpoint:0,
+        smooth: true,
+      },
+      tablet: {
+        breakpoint:0,
+        smooth: true,
+      },
     });
 
     locoScroll.on("scroll", () => {

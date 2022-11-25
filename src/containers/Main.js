@@ -12,7 +12,7 @@ import useLocoScroll from "../hooks/useLocoScroll";
 const Main = () => {
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
-  useLocoScroll(!isShowingSplashAnimation);
+  
   useEffect(() => {
     const splashTimer = setTimeout(
       () => setIsShowingSplashAnimation(false),
@@ -22,6 +22,7 @@ const Main = () => {
       clearTimeout(splashTimer);
     };
   }, []);
+  useLocoScroll(!isShowingSplashAnimation);
   return (
     <div id="main-container" data-scroll-container>
       {isShowingSplashAnimation ? (
