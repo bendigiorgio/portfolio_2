@@ -23,7 +23,7 @@ const Main = () => {
     };
   }, []);
   return (
-    <div id="main-container" data-scroll-section>
+    <div id="main-container" data-scroll-container>
       {isShowingSplashAnimation ? (
         <SplashScreen />
       ) : (
@@ -35,7 +35,7 @@ const Main = () => {
                 <>
                   <Greeting />
                   <JapaneseSkill />
-                  <Travel />
+                  {/* <Travel /> */}
                   <WorkExp />
                 </>
               }

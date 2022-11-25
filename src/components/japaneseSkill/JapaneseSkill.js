@@ -31,8 +31,7 @@ export default function JapaneseSkill() {
   return (
     <div className="language-wrapper langsec" 
     onMouseEnter={() => setIsMouseIn(true)}
-    onMouseLeave={() => setIsMouseIn(false)} 
-    data-scroll-section>
+    onMouseLeave={() => setIsMouseIn(false)} >
       <div className="hero">
         <h1 className="text eng">I love learning new languages and how it opens up the world.<br/>I have been learning Japanese since 7th grade and can’t imagine my life without it.</h1>
       </div>

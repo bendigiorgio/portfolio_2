@@ -1,7 +1,7 @@
 import "./WaveSvg.scss";
 
 
-export default function WaveSvg() {
+export default function WaveSvg(): JSX.Element {
   return (
     
     <svg

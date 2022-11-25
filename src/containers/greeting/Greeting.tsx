@@ -1,10 +1,10 @@
 import "./Greeting.scss"
 import WaveSvg from "../../components/waveSvg/WaveSvg";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+
 import React, { useEffect} from "react";
 
-export default function Greeting(){
+export default function Greeting() : JSX.Element{
     useEffect(() => {
         var action = gsap.timeline({
             defaults:{ ease:'none'},
@@ -13,16 +13,16 @@ export default function Greeting(){
               scroller: "#main-container",
               scrub:0.3,
               start: "top top",
-              end: "+=80%"
+              end: "+=100%"
             }
           })
           .set('.bg, .rwv-3, .rwv-2, .rwv-1, .blwv', {transformOrigin: "bottom center"})
-          .to('.rwv-3, .rwv-2, .rwv-1, .blwv', {scaleY:0, duration:2, stagger:0.3})
+          .to('.rwv-3, .rwv-2, .rwv-1, .blwv', {scaleY:0, duration:2, stagger:0.27})
       }, []);
     
     return(
         <>
-        <section className="welcome-container" data-scroll-section>
+        <section className="welcome-container">
             <div className="panel">
                 <div id="bg-image">
                     <WaveSvg />
