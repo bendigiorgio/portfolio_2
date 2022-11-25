@@ -1,44 +1,14 @@
 @import "../../globalColor";
 
-.experience-wrapper {
+.experience {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1448px;
   justify-content: center;
   align-items: flex-start;
   margin-right: -1px;
-  height: 100vh;
 }
-.experience-heading {
-  // display: flex;
-  // flex-direction: column;
-  max-width: 737px;
-  // justify-content: flex-start;
-  // align-items: flex-start;
-  padding-top: 20px;
-  padding-right: 47px;
-  padding-bottom: 51px;
-  padding-left: 47px;
 
-  #title {
-    max-width: 50vw;
-    color: rgba(222, 204, 190, 1);
-    font-size: 7vw;;
-    letter-spacing: 0%;
-    text-align: left;
-    font-family: "Montserrat", sans-serif;
-  }
-  #subtitle {
-    max-width: 35vw;
-    margin-top: -1px;
-    color: rgba(206, 167, 162, 1);
-    font-size: 5vw;
-    letter-spacing: 0%;
-    text-align: left;
-    font-family: "Fira Sans", sans-serif;
-  }
-}
 
 .carousel-wrapper {
     display: grid;
