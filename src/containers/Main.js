@@ -1,8 +1,7 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import React, { useEffect, useState } from "react";
 import SplashScreen from "./splashScreen/SplashScreen";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Travel from "./travel/Travel";
+// import Travel from "./travel/Travel";
 import "./Main.scss";
 import Greeting from "./greeting/Greeting";
 import JapaneseSkill from "../components/japaneseSkill/JapaneseSkill";

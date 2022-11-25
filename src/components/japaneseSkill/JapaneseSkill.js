@@ -29,7 +29,7 @@ export default function JapaneseSkill() {
   }, [isMouseIn]);
 
   return (
-    <div className="language-wrapper langsec" 
+    <div className="language wrapper langsec" 
     onMouseEnter={() => setIsMouseIn(true)}
     onMouseLeave={() => setIsMouseIn(false)} >
       <div className="hero">

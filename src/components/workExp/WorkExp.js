@@ -12,8 +12,8 @@ import "swiper/scss/pagination";
 
 export default function WorkExp() {
   return (
-    <div className="experience-wrapper">
-      <div className="experience-heading">
+    <div className="experience wrapper">
+      <div className="heading">
         <div id="title">What I Do</div>
         <div id="subtitle">Data Analysis</div>
       </div>

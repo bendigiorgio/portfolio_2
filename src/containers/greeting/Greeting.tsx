@@ -6,7 +6,7 @@ import React, { useEffect} from "react";
 
 export default function Greeting() : JSX.Element{
     useEffect(() => {
-        var action = gsap.timeline({
+        gsap.timeline({
             defaults:{ ease:'none'},
             scrollTrigger: {
               trigger: ".panel",

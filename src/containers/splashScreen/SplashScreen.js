@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./SplashScreen.css";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import splashAnimation from "../../assets/lottie/splashAnimation";
