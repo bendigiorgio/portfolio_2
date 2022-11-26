@@ -1,10 +1,20 @@
 import React from 'react'
+import {useEffect, useCallback} from 'react'
 import './WorkAsk.scss'
+import { gsap } from "gsap";
+import AskLine from "../askLine/AskLine"
 
-type Props = {}
+export default function WorkAsk() {
 
-export default function WorkAsk({}: Props) {
   return (
-    <div>WorkAsk</div>
+    <div className='wrapper ask-section'>
+        <div className='ask-line-container'>
+            <AskLine />
+        </div>
+        <div className='heading ask-header'>
+            <h1 id='title'>Ask</h1>
+        </div>
+        
+    </div>
   )
 }

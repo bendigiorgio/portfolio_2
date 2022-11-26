@@ -6,6 +6,7 @@ import "./Main.scss";
 import Greeting from "./greeting/Greeting";
 import JapaneseSkill from "../components/japaneseSkill/JapaneseSkill";
 import WorkExp from "../components/workExp/WorkExp";
+import WorkAsk from "../components/workAsk/WorkAsk";
 import useLocoScroll from "../hooks/useLocoScroll";
 
 const Main = () => {
@@ -37,6 +38,7 @@ const Main = () => {
                   <JapaneseSkill />
                   {/* <Travel /> */}
                   <WorkExp />
+                  <WorkAsk />
                 </>
               }
             />
